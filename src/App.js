@@ -14,6 +14,7 @@ const Foto = lazy(() => import("./components/foto/Foto.jsx"));
 function App() {
   const comment = "To piszę z app.js";
   const [zmienNapis, setZmienNapis] = useState("zwykły");
+  const [pytanie, setPytanie] = useState("");
   return (
     <div className="App">
       <Router>
@@ -26,7 +27,10 @@ function App() {
         >
           <Nav />
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route
+              path="/"
+              element={<Main pytanie={pytanie} setPytanie={setPytanie} />}
+            />
             <Route path="/skill" element={<Skills />} />
             <Route
               path="/content"
@@ -40,7 +44,10 @@ function App() {
             />
             <Route path="/leniwy" element={<Leniwy />}></Route>
             <Route path="/foto" element={<Foto />}></Route>
-            <Route path="/api" element={<Api />}></Route>
+            <Route
+              path="/api"
+              element={<Api pytanie={pytanie} setPytanie={setPytanie} />}
+            ></Route>
           </Routes>
         </Suspense>
       </Router>
