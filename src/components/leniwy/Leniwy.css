@@ -1,0 +1,19 @@
+.leniwy-container {
+  background: rgb(56, 180, 56);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.leniwy-container h1 {
+  font-size: 72px;
+}
+
+.leniwy-container h2 {
+  font-size: 64px;
+}
+
+.leniwy-container p {
+  font-size: 32px;
+}
